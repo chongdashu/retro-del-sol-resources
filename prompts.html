@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Fifteen moments in the making of Retro del Sol: the original prompts, what changed, and what to try in your own game. An accessible lesson with real project visuals.">
+<title>The prompts that shaped the game · Retro del Sol</title>
+<style>
+:root { color-scheme:light; --ink:#244e43; --soft:#46655a; --muted:#5d7161; --paper:#fffaf0; --sand:#f7efd9; --green:#265e50; --teal:#2f8f8a; --gold:#f2c456; --coral:#b9513d; --line:#c3c8ac; --sans:"Avenir Next","Trebuchet MS",system-ui,sans-serif; --serif:Georgia,"Times New Roman",serif; }
+* { box-sizing:border-box; }
+html { scroll-padding-top:88px; }
+body { margin:0; background:radial-gradient(ellipse at 80% 0%,#ffe9b5 0%,transparent 35%) fixed,var(--sand); color:var(--ink); font:17px/1.65 var(--sans); -webkit-font-smoothing:antialiased; }
+a { color:var(--green); text-underline-offset:4px; }
+a:hover { color:var(--coral); }
+:focus-visible { outline:3px solid var(--coral); outline-offset:4px; }
+[hidden] { display:none!important; }
+.skip { position:absolute; top:-100px; left:16px; z-index:10; background:var(--paper); padding:12px; }
+.skip:focus { top:12px; }
+.bar { position:sticky; top:0; z-index:4; background:rgb(247 239 217 / .98); border-bottom:1px solid var(--line); }
+.bar-inner { max-width:1200px; margin:auto; padding:13px 28px; display:flex; justify-content:space-between; gap:18px; align-items:center; }
+.brand { text-decoration:none; white-space:nowrap; font:italic 900 25px var(--serif); }
+.brand span { color:#98702b; font-style:normal; margin-right:5px; }
+.bar nav { display:flex; flex-wrap:wrap; gap:4px 22px; font-size:13px; font-weight:800; }
+.bar nav a { min-height:30px; display:inline-flex; align-items:center; }
+main,footer { max-width:1200px; padding:0 28px; margin:auto; }
+.hero { display:grid; grid-template-columns:1.2fr 1fr; gap:50px; align-items:center; padding:62px 0 42px; }
+.eyebrow { font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.14em; color:var(--soft); margin:0 0 18px; }
+h1 { font:italic 900 clamp(42px,5.2vw,68px)/1.05 var(--serif); letter-spacing:-.04em; margin:0 0 24px; }
+.lede { font-size:20px; line-height:1.55; color:var(--soft); margin:0; }
+.hero figure { transform:rotate(1deg); }
+.hero img { border:7px solid var(--paper); box-shadow:0 12px 30px rgb(36 78 67 / .15); }
+figure { margin:0; min-width:0; }
+figure img,video { display:block; width:100%; height:auto; background:#e9e2c8; border-radius:12px; }
+video { aspect-ratio:16/9; object-fit:contain; }
+figcaption { font-size:13px; color:var(--muted); line-height:1.5; margin-top:10px; }
+.zoom { display:block; border-radius:12px; }
+.route { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--paper); }
+.route a { padding:16px; font-size:14px; font-weight:800; text-decoration:none; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+.route a:nth-child(4n) { border-right:0; }
+.route a:nth-child(n+5) { border-bottom:0; }
+.route a:hover { background:#e5eddf; color:var(--green); }
+.route span { font:italic 900 20px var(--serif); margin-right:8px; color:#99702a; }
+.reading-note { font-size:13px; color:var(--muted); margin:16px 0 0; max-width:800px; }
+.chapter { padding:60px 0; border-bottom:1px solid var(--line); }
+.chapter-head { display:flex; gap:24px; align-items:baseline; margin-bottom:28px; max-width:920px; }
+.number { font:italic 900 38px var(--serif); color:#9b732d; flex:none; }
+h2 { font:italic 900 clamp(28px,3.4vw,43px)/1.12 var(--serif); letter-spacing:-.025em; margin:0 0 14px; }
+.context { color:var(--soft); margin:0; max-width:760px; }
+.chapter-grid { display:grid; grid-template-columns:1.05fr 1fr; gap:36px; align-items:start; }
+.words,.evidence { min-width:0; }
+.quote { padding:20px 24px 24px; background:var(--green); color:var(--paper); border-radius:12px; }
+.quote-head { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:14px; font-size:11px; text-transform:uppercase; letter-spacing:.1em; font-weight:800; color:#d9e9c8; }
+blockquote { margin:0; white-space:pre-line; font:19px/1.65 var(--sans); }
+.copy { border:1px solid #8eaf9e; border-radius:99px; padding:7px 12px; min-height:44px; background:transparent; color:inherit; font:700 12px var(--sans); cursor:pointer; flex:none; }
+.copy:hover { background:#376e60; }
+.quote.followup { margin-top:18px; background:#e3ecdf; color:var(--ink); }
+.followup .quote-head { color:var(--soft); }
+.followup .copy:hover { background:#d3e0cb; }
+.followup blockquote { font-size:17px; }
+.source { margin:9px 0 20px; font-size:13px; }
+summary { cursor:pointer; font-weight:700; color:var(--soft); padding:9px 0; min-height:40px; }
+.source-body { padding:18px; border:1px solid var(--line); border-radius:10px; background:var(--paper); font-size:14px; }
+.source-body p { margin:0 0 14px; }
+.source-body p:last-child { margin-bottom:0; }
+.source-body pre { white-space:pre-wrap; overflow-wrap:anywhere; font:14px/1.7 var(--sans); margin:0 0 18px; }
+.source-note { font-size:12px; color:var(--muted); }
+.result { margin:22px 0; }
+.takeaway { padding:17px 20px; border-left:3px solid var(--teal); background:#e9eddf; border-radius:0 8px 8px 0; }
+.takeaway h3 { font-size:12px; color:var(--soft); margin:0 0 6px; }
+.takeaway p { font-size:15px; margin:0; }
+.evidence { display:grid; gap:18px; }
+.record { font-size:12px; color:var(--muted); }
+.asset-example { margin-top:20px; font-size:13px; }
+.asset-example blockquote { font-size:16px; margin-bottom:16px; border-left:3px solid var(--gold); padding-left:16px; }
+.practice { margin:56px 0 0; padding:36px; background:var(--paper); border:1px solid var(--line); border-radius:14px; display:grid; grid-template-columns:.85fr 1.15fr; gap:32px; }
+.practice p { margin:0 0 18px; color:var(--soft); }
+.practice h2 { font-size:34px; }
+.practice .quote blockquote { font-size:16px; }
+.closing { display:flex; flex-wrap:wrap; gap:12px; padding:28px 0; }
+.button { display:inline-flex; align-items:center; min-height:44px; border:1px solid var(--green); color:var(--green); padding:8px 18px; text-decoration:none; font-size:14px; font-weight:800; border-radius:99px; }
+.button.primary { background:var(--green); color:var(--paper); }
+.button:hover { background:var(--teal); color:white; }
+footer { padding-top:12px; padding-bottom:36px; color:var(--muted); font-size:12px; }
+.copy-status { position:fixed; bottom:20px; left:50%; transform:translateX(-50%); max-width:calc(100% - 32px); width:max-content; background:var(--ink); color:var(--paper); padding:10px 18px; border-radius:9px; z-index:8; font-size:14px; box-shadow:0 4px 15px #0002; }
+.copy-status:empty { display:none; }
+@media(max-width:900px) { .hero { gap:24px; } .chapter-grid { grid-template-columns:1fr; gap:24px; } .evidence { max-width:800px; } .evidence.paired { grid-template-columns:1fr 1fr; max-width:none; } .evidence.paired .record { grid-column:1/-1; } .practice { grid-template-columns:1fr; gap:20px; } }
+@media(max-width:650px) { html { scroll-padding-top:148px; } .bar-inner { padding:10px 18px; flex-wrap:wrap; gap:6px; } .bar nav { gap:4px 18px; } main,footer { padding-left:18px; padding-right:18px; } .hero { grid-template-columns:1fr; padding:32px 0; } .hero figure { transform:none; } .lede { font-size:18px; } .route { grid-template-columns:1fr 1fr; } .route a { padding:12px; font-size:12px; } .route a:nth-child(2n) { border-right:0; } .route a:nth-child(n+5) { border-bottom:1px solid var(--line); } .route a:nth-child(n+7) { border-bottom:0; } .route span { font-size:18px; } .chapter { padding:40px 0; } .chapter-head { gap:12px; margin-bottom:20px; } .number { font-size:28px; } .context { font-size:16px; } .quote { padding:16px 18px 20px; } blockquote { font-size:17px; } .evidence.paired { grid-template-columns:1fr; } .practice { padding:22px; } }
+@media(prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; } }
+@media print { .bar,.copy,.closing,.copy-status,.skip { display:none; } body { background:white; } .hero figure { transform:none; } .quote,.takeaway,figure { break-inside:avoid; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the lesson</a>
+<header class="bar"><div class="bar-inner"><a class="brand" href="#main"><span aria-hidden="true">☀</span> Retro del Sol</a><nav aria-label="Lesson navigation"><a href="#route">The fifteen moments</a><a href="https://github.com/chongdashu/retro-del-sol-resources/blob/main/LESSONS.md">Lessons</a><a href="https://github.com/chongdashu/retro-del-sol-resources/blob/main/models/README.md">Models</a></nav></div></header>
+<main id="main">
+<header class="hero"><div><p class="eyebrow">Making Retro del Sol · A lesson in giving direction</p><h1>The prompts that shaped the game.</h1><p class="lede">A seaside town became a place to walk, drive and sail with other people. These fifteen moments show how the requests changed as there was more to see and play.</p></div><figure><a class="zoom" href="media/20261020-122857-play-town/quay-spawn.webp"><img src="media/20261020-122857-play-town/quay-spawn.webp" width="1280" height="720" alt="The courier beside a postal trike in the playable seaside town"></a><figcaption>Actual game capture: the town became somewhere to explore.</figcaption></figure></header>
+<nav class="route" id="route" aria-label="Choose a moment in the journey"><a href="#picture"><span>01</span> See the idea</a><a href="#pieces"><span>02</span> Build the pieces</a><a href="#practice"><span>03</span> Try the controls</a><a href="#movement"><span>04</span> Give feedback</a><a href="#hands"><span>05</span> Connect the body</a><a href="#jumpon"><span>06</span> Exaggerate it</a><a href="#sequence"><span>07</span> Describe an action</a><a href="#docks"><span>08</span> Mark the crossings</a><a href="#depth"><span>09</span> Tune the look</a><a href="#world"><span>10</span> Grow the world</a><a href="#wayoff"><span>11</span> Report what&#39;s missing</a><a href="#shared"><span>12</span> Share the world</a><a href="#deliveries"><span>13</span> Make play clearer</a><a href="#customise"><span>14</span> Make it yours</a><a href="#boost"><span>15</span> Add a twist</a></nav>
+<p class="reading-note">The quotes are excerpts from the original messages, with spelling preserved. Each round also involved implementation and testing. The full prompts are there to open when you want more context.</p>
+<section class="chapter" id="picture" aria-labelledby="title-picture">
+    <header class="chapter-head"><span class="number">01</span><div><h2 id="title-picture">Ask to see the game</h2><p class="context">The project began with four possible games. Asking for a picture of play made it easier to choose the kind of world to build.</p></div></header>
+    <div class="chapter-grid"><div class="words">
+      <div class="quote"><div class="quote-head"><span>The prompt</span><button class="copy" type="button" data-copy="quote-picture" hidden aria-label="Copy prompt excerpt">Copy excerpt</button></div><blockquote id="quote-picture">we want these to not look like box art or concept art, but rather, reflect what in-game visuals would look like.
+this will set both the creative and art direction of the game we build.
+think about 4 distinct premises of the game, and then generate 4 representatives mock ups.</blockquote></div>
+    <details class="source"><summary>Read the full prompt</summary><div class="source-body"><p class="source-note">Original message to the coding agent. Spelling and wording preserved.</p><pre>ok now we should use your in built image generation to generate 4 game mock ups for the game we want to build
+we want these to not look like box art or concept art, but rather, reflect what in-game visuals would look like.
+this will set both the creative and art direction of the game we build.
+think about 4 distinct premises of the game, and then generate 4 representatives mock ups.
+use sub-agents to do this in parallel.</pre></div></details>
+
+      <p class="result">The seaside courier idea, first called Tidepost, became Retro del Sol. Its little streets, warm colours and delivery vehicle gave the later work a direction.</p>
+      <aside class="takeaway"><h3>Try this in your own project</h3><p>Ask for a picture that shows what the player will actually do. Use it to choose a direction before building the whole game.</p></aside>
+
+    </div><div class="evidence "><figure><a href="media/20261020-070916-gameplay-directions/tidepost.webp" class="zoom" aria-label="Enlarge: Early image-generated Tidepost mockup showing a courier vehicle in a sunny seaside town"><img src="media/20261020-070916-gameplay-directions/tidepost.webp" alt="Early image-generated Tidepost mockup showing a courier vehicle in a sunny seaside town" loading="lazy" decoding="async"></a><figcaption>Chosen direction: an early generated mockup, not a screenshot of the game.</figcaption></figure></div></div>
+  </section>
+<section class="chapter" id="pieces" aria-labelledby="title-pieces">
+    <header class="chapter-head"><span class="number">02</span><div><h2 id="title-pieces">Turn the idea into a place</h2><p class="context">Once the seaside setting was chosen, the next request described the experience: a world large enough to drive around.</p></div></header>
+    <div class="chapter-grid"><div class="words">
+      <div class="quote"><div class="quote-head"><span>The prompt</span><button class="copy" type="button" data-copy="quote-pieces" hidden aria-label="Copy prompt excerpt">Copy excerpt</button></div><blockquote id="quote-pieces">I think if we can go for a well built out world big enough to drive around it would already be a great showcase.
+could make it multiplayer as well.</blockquote></div>
+    <details class="source"><summary>Read the full prompt</summary><div class="source-body"><p class="source-note">Original message to the coding agent. Spelling and wording preserved.</p><pre>I think if we can go for a well built out world big enough to drive around it would already be a great showcase.
+could make it multiplayer as well.
+ok let's go with tidepost, but let's not call it tide post, but maybe retro del sol or something 
+what you want to do now is
+1. use images 2.5 to generate more reference images that will help us have sufficient understanding and references to build a compelling world. So think about the environment, props, and objects that would be in the world. when this is done, you will then use $retro-diffusion-3d to generate these props, environments, export them into  a simple small environment test scene that places these props, environment objects, in blender.
+2. use images 2.5 to generate reference turnaround sheets for the character, and then use $retro-diffusion-3d to create the character and have it imported into blender, rigged and animated for the key animations like idle, walk, run, sitting in car.
+3. use images 2.5 to generate reference images for the vehicle, and then use $retro-diffusion-3d to create the vehicle, imported into blender, and then consider what rig set up is needed for it to be animated</pre><p class="source-note">Other messages from the same exchange are left out here.</p></div></details>
+
+      <p class="result">The longer request split the work into the town and props, the courier, and the vehicle. Reference pictures helped them belong together. Retro Diffusion made the models, which were then inspected and adjusted in Blender, a 3D editor.</p>
+      <aside class="takeaway"><h3>Try this in your own project</h3><p>Give the agent a shared setting, then name the pieces it needs to make. Keep a small place where you can inspect them together.</p></aside>
+      <details class="asset-example"><summary>One example: asking Retro Diffusion for a bench</summary><div class="source-body"><p>The agent also wrote prompts for individual objects. This one describes the bench and asks for it on its own.</p><blockquote>Wooden park bench matching the reference: three seat slats, two back slats, chunky dark navy iron legs with square feet. Single freestanding bench, no ground or other objects. Coarse pixel textures.</blockquote><p class="source-note">Exact asset-generation prompt sent to Retro Diffusion, separate from the human’s instructions to the coding agent.</p></div></details>
+    </div><div class="evidence "><figure><a href="media/20261020-rd-articles/props-diorama.webp" class="zoom" aria-label="Enlarge: Generated seaside props displayed together in a Blender scene"><img src="media/20261020-rd-articles/props-diorama.webp" alt="Generated seaside props displayed together in a Blender scene" loading="lazy" decoding="async"></a><figcaption>Generated props, arranged together for review in Blender.</figcaption></figure></div></div>
+  </section>
+<section class="chapter" id="practice" aria-labelledby="title-practice">
+    <header class="chapter-head"><span class="number">03</span><div><h2 id="title-practice">Make a place to try things</h2><p class="context">A beautiful town would not tell us whether walking and driving felt good. The next useful place was a simple practice area.</p></div></header>
+    <div class="chapter-grid"><div class="words">
+      <div class="quote"><div class="quote-head"><span>The prompt</span><button class="copy" type="button" data-copy="quote-practice" hidden aria-label="Copy prompt excerpt">Copy excerpt</button></div><blockquote id="quote-practice">let&#39;s focus on a new scene that is a plain gym for testing things like the walking and entering the trike and then testing the trike movement.</blockquote></div>
+    <details class="source"><summary>Read the full prompt</summary><div class="source-body"><p class="source-note">Original message to the coding agent. Spelling and wording preserved.</p><pre>ok while the agent focuses on the environment and tech art, let's focus on a new scene that is a plain gym for testing things like the walking and entering the trike and then testing the trike movement. we will also test the camera, with  large area for just moving around, and then an area with some placeholder courses.</pre><p class="source-note">Other messages from the same exchange are left out here.</p></div></details>
+
+      <p class="result">The movement gym gave the courier room to walk, mount the trike and drive through obstacles. The camera could be tested there too. A follow-up rule removed the countdown so testing started immediately.</p>
+      <aside class="takeaway"><h3>Try this in your own project</h3><p>Ask for somewhere small and easy to test one interaction. You can spot problems sooner when the scenery is simple.</p></aside>
+
+    </div><div class="evidence "><figure><a href="media/20261020-movement-gym/open-pad-overview.webp" class="zoom" aria-label="Enlarge: The courier and postal trike on the open movement test pad"><img src="media/20261020-movement-gym/open-pad-overview.webp" alt="The courier and postal trike on the open movement test pad" loading="lazy" decoding="async"></a><figcaption>Actual game capture: the practice area used to test movement.</figcaption></figure></div></div>
+  </section>
+<section class="chapter" id="movement" aria-labelledby="title-movement">
+    <header class="chapter-head"><span class="number">04</span><div><h2 id="title-movement">Say what looks wrong</h2><p class="context">The character could move, but the walk felt stiff. This feedback named the visible problems and the feeling to aim for.</p></div></header>
+    <div class="chapter-grid"><div class="words">
+      <div class="quote"><div class="quote-head"><span>The prompt</span><button class="copy" type="button" data-copy="quote-movement" hidden aria-label="Copy prompt excerpt">Copy excerpt</button></div><blockquote id="quote-movement">his walk feels like his legs can&#39;t bend at his knees
+his elbows too, are not bending much
+his up/down motion is very jittery
+
+i think we should focus on exaggerated, whimsical, clearly visible movements</blockquote></div>
+    <details class="source"><summary>Read the full prompt</summary><div class="source-body"><p class="source-note">Original message to the coding agent. Spelling and wording preserved.</p><pre>his walk feels like his legs can't bend at his knees
+his elbows too, are not bending much
+his up/down motion is very jittery</pre><p class="source-note">Other messages from the same exchange are left out here.</p></div></details>
+
+      <p class="result">The walk and run were reworked with clearer knee and elbow bends and a smoother bounce. The clips below show the earlier motion and the revised motion in the game.</p>
+      <aside class="takeaway"><h3>Try this in your own project</h3><p>Point to the body part, movement or moment that feels wrong. Add a few words about the feeling you want.</p></aside>
+
+    </div><div class="evidence paired"><figure><video controls muted playsinline preload="none" poster="media/20261020-110401-courier-motion-review/before-walk-frame.webp" aria-label="Earlier courier walk in the movement test"><source src="media/20261020-110401-courier-motion-review/before-walk-clip.mp4" type="video/mp4">Your browser cannot play this video. <a href="media/20261020-110401-courier-motion-review/before-walk-clip.mp4">Open the clip</a>.</video><figcaption>Before: the earlier walk in the game.</figcaption></figure><figure><video controls muted playsinline preload="none" poster="media/20261020-110401-courier-motion-review/after-walk-frame.webp" aria-label="Revised courier walk and run in the movement test"><source src="media/20261020-110401-courier-motion-review/after-walk-run-clip.mp4" type="video/mp4">Your browser cannot play this video. <a href="media/20261020-110401-courier-motion-review/after-walk-run-clip.mp4">Open the clip</a>.</video><figcaption>After: revised walking and running.</figcaption></figure></div></div>
+  </section>
+<section class="chapter" id="hands" aria-labelledby="title-hands">
+    <header class="chapter-head"><span class="number">05</span><div><h2 id="title-hands">Say what should touch</h2><p class="context">On the trike, the courier&#39;s hands floated near the handlebars and stayed still while the trike turned.</p></div></header>
+    <div class="chapter-grid"><div class="words">
+      <div class="quote"><div class="quote-head"><span>The prompt</span><button class="copy" type="button" data-copy="quote-hands" hidden aria-label="Copy prompt excerpt">Copy excerpt</button></div><blockquote id="quote-hands">when he goes left and right on the vehicle, his hands should attach to the steering wheel and turn left and right too</blockquote></div>
+    <details class="source"><summary>Read the full prompt</summary><div class="source-body"><p class="source-note">Original message to the coding agent. Spelling and wording preserved.</p><pre>when he goes left and right on the vehicle, his hands should attach to the steering wheel and turn left and right too</pre></div></details>
+
+      <p class="result">Both hands now reach for grip points on the handlebars and follow them as the trike steers. The arms bend to keep the hands in place, and the grip blends in as he climbs on and lets go as he gets off.</p>
+      <aside class="takeaway"><h3>Try this in your own project</h3><p>When a character uses an object, name the parts that should touch and what should move together. &quot;Hands on the handlebars, turning with them&quot; is enough for the agent to work from.</p></aside>
+
+    </div><div class="evidence "><figure><video controls muted playsinline preload="none" poster="media/20261021-prompts-more/steering-poster.webp" aria-label="Courier riding the trike with both hands gripping the handlebars as it steers"><source src="media/20261020-113032-courier-arm-steering/steering-final.mp4" type="video/mp4">Your browser cannot play this video. <a href="media/20261020-113032-courier-arm-steering/steering-final.mp4">Open the clip</a>.</video><figcaption>Actual game capture: hands on the handlebars, turning with the steering.</figcaption></figure></div></div>
+  </section>
+<section class="chapter" id="jumpon" aria-labelledby="title-jumpon">
+    <header class="chapter-head"><span class="number">06</span><div><h2 id="title-jumpon">Ask for a bigger, bouncier move</h2><p class="context">Getting on the trike was a quick slide into the seat. It worked, but it had no character.</p></div></header>
+    <div class="chapter-grid"><div class="words">
+      <div class="quote"><div class="quote-head"><span>The prompt</span><button class="copy" type="button" data-copy="quote-jumpon" hidden aria-label="Copy prompt excerpt">Copy excerpt</button></div><blockquote id="quote-jumpon">can we have an exagerrated animation of him jumping into the bike, with it bobbing as he lands in</blockquote></div>
+    <details class="source"><summary>Read the full prompt</summary><div class="source-body"><p class="source-note">Original message to the coding agent. Spelling and wording preserved.</p><pre>can we have an exagerrated animation of him jumping into the bike, with it bobbing as he lands in</pre></div></details>
+      <div class="quote followup"><div class="quote-head"><span>A later correction</span><button class="copy" type="button" data-copy="followup-jumpon" hidden aria-label="Copy follow-up excerpt">Copy excerpt</button></div><blockquote id="followup-jumpon">his jump out of the car also needs the same fix</blockquote></div>
+    <details class="source"><summary>Read the full follow-up</summary><div class="source-body"><p class="source-note">Original message to the coding agent. Spelling and wording preserved.</p><pre>his jump out of the car also needs the same fix</pre></div></details>
+      <p class="result">The courier now crouches, hops high and drops into the seat, and the trike dips and bounces back as he lands. A short follow-up gave getting off the same treatment: he stands, crouches and jumps clear while the trike settles.</p>
+      <aside class="takeaway"><h3>Try this in your own project</h3><p>If a move feels flat, ask for it to be exaggerated and say how the world should react. Once one move feels right, &quot;the same fix&quot; is a quick way to ask for it elsewhere.</p></aside>
+
+    </div><div class="evidence paired"><figure><video controls muted playsinline preload="none" poster="media/20261020-114935-courier-jump-mount/jump-apex.webp" aria-label="Courier jumps onto the trike, which dips as he lands"><source src="media/20261020-114935-courier-jump-mount/jump-mount-final.mp4" type="video/mp4">Your browser cannot play this video. <a href="media/20261020-114935-courier-jump-mount/jump-mount-final.mp4">Open the clip</a>.</video><figcaption>Getting on: a big hop, and the trike bobs as he lands.</figcaption></figure><figure><video controls muted playsinline preload="none" poster="media/20261020-125942-trike-disembark/town-jump.webp" aria-label="Courier stands up on the trike and jumps off in the town"><source src="media/20261020-125942-trike-disembark/town-stand-jump.mp4" type="video/mp4">Your browser cannot play this video. <a href="media/20261020-125942-trike-disembark/town-stand-jump.mp4">Open the clip</a>.</video><figcaption>Getting off: stand, crouch and jump clear.</figcaption></figure></div></div>
+  </section>
+<section class="chapter" id="sequence" aria-labelledby="title-sequence">
+    <header class="chapter-head"><span class="number">07</span><div><h2 id="title-sequence">Write the action in order</h2><p class="context">Getting out of the boat looked weightless. The correction described a sequence anyone could imagine.</p></div></header>
+    <div class="chapter-grid"><div class="words">
+      <div class="quote"><div class="quote-head"><span>The prompt</span><button class="copy" type="button" data-copy="quote-sequence" hidden aria-label="Copy prompt excerpt">Copy excerpt</button></div><blockquote id="quote-sequence">The jumping out of the boat needs work, he sort of floats out from seating. He should stand up, with the boat rocking a bit, then jump out with the boat rocking more.</blockquote></div>
+    <details class="source"><summary>Read the full prompt</summary><div class="source-body"><p class="source-note">Original message to the coding agent. Spelling and wording preserved.</p><pre>The jumping out of the boat needs work, he sort of floats out from seating. He should stand up, with the boat rocking a bit, then jump out with the boat rocking more.</pre></div></details>
+
+      <p class="result">The courier now stands, prepares to jump and leaves the boat. The boat reacts as his weight shifts, then rocks more as he jumps away.</p>
+      <aside class="takeaway"><h3>Try this in your own project</h3><p>Describe what happens first, what happens next, and how nearby objects should react. This gives the agent a clear motion to work toward.</p></aside>
+
+    </div><div class="evidence "><figure><video controls muted playsinline preload="none" poster="media/20261020-123611-boat-disembark/standing.webp" aria-label="Courier stands and jumps out while the boat rocks"><source src="media/20261020-123611-boat-disembark/stand-jump-recoil.mp4" type="video/mp4">Your browser cannot play this video. <a href="media/20261020-123611-boat-disembark/stand-jump-recoil.mp4">Open the clip</a>.</video><figcaption>Actual game capture: the revised boat exit.</figcaption></figure></div></div>
+  </section>
+<section class="chapter" id="docks" aria-labelledby="title-docks">
+    <header class="chapter-head"><span class="number">08</span><div><h2 id="title-docks">Show where land meets water</h2><p class="context">The courier could walk and the boat could sail, but nothing joined the two. There had to be places to step from land into a boat and back.</p></div></header>
+    <div class="chapter-grid"><div class="words">
+      <div class="quote"><div class="quote-head"><span>The prompt</span><button class="copy" type="button" data-copy="quote-docks" hidden aria-label="Copy prompt excerpt">Copy excerpt</button></div><blockquote id="quote-docks">this needs &#39;prefabs&#39; to indicate the water &lt;&gt; land &lt;&gt; boat connection - if u know what i mean, so as to allow getting on and off at regions</blockquote></div>
+    <details class="source"><summary>Read the full prompt</summary><div class="source-body"><p class="source-note">Original message to the coding agent. Spelling and wording preserved.</p><pre>ok cool, now we need to have in the gym getting into water and getting off water
+this needs &#39;prefabs&#39; to indicate the water &lt;&gt; land &lt;&gt; boat connection - if u know what i mean, so as to allow getting on and off at regions</pre></div></details>
+      <div class="quote followup"><div class="quote-head"><span>A later correction</span><button class="copy" type="button" data-copy="followup-docks" hidden aria-label="Copy follow-up excerpt">Copy excerpt</button></div><blockquote id="followup-docks">we need an action button when the player is in a boat hotspot - right now it&#39;s not clear exactly if it;s in the hotspot</blockquote></div>
+      <p class="result">Piers became one reusable piece with a spot to stand and a berth for the boat, used both for what you see and for the rules of boarding. Much later, a play session showed the spot was hard to find, so a ring now marks it on the deck and a Board button appears over the boat when you stand in it.</p>
+      <aside class="takeaway"><h3>Try this in your own project</h3><p>Name the places where the rules change, like the edge between land and water, and ask for one reusable piece that marks them. Then check that a player can actually see where they are.</p></aside>
+
+    </div><div class="evidence "><figure><a href="media/20261021-prompts-more/boarding-ring.webp" class="zoom" aria-label="Enlarge: Courier standing in a gold ring on the pier deck with a Board button over the boat"><img src="media/20261021-prompts-more/boarding-ring.webp" alt="Courier standing in a gold ring on the pier deck with a Board button over the boat" loading="lazy" decoding="async"></a><figcaption>Standing in the boarding spot: the ring turns gold and the Board button appears.</figcaption></figure></div></div>
+  </section>
+<section class="chapter" id="depth" aria-labelledby="title-depth">
+    <header class="chapter-head"><span class="number">09</span><div><h2 id="title-depth">Ask for dials, not one answer</h2><p class="context">The town looked flat. Nobody knew yet which lighting and effects would make it feel deep.</p></div></header>
+    <div class="chapter-grid"><div class="words">
+      <div class="quote"><div class="quote-head"><span>The prompt</span><button class="copy" type="button" data-copy="quote-depth" hidden aria-label="Copy prompt excerpt">Copy excerpt</button></div><blockquote id="quote-depth">I want to see the effect of lighting, post processing, fog, bloom, etc. in order to see what we can do to bring the level to be less &#39;flat&#39; and more &#39;depth&#39;.</blockquote></div>
+      <div class="quote followup"><div class="quote-head"><span>A later correction</span><button class="copy" type="button" data-copy="followup-depth" hidden aria-label="Copy follow-up excerpt">Copy excerpt</button></div><blockquote id="followup-depth">we can do better with the water
+what are some ways to get water depth, froth, motion, height, etc.</blockquote></div>
+    <details class="source"><summary>Read the full follow-up</summary><div class="source-body"><p class="source-note">Original message to the coding agent. Spelling and wording preserved.</p><pre>we can do better with the water
+what are some ways to get water depth, froth, motion, height, etc.</pre></div></details>
+      <p class="result">The town scene gained sliders and switches for time of day, fog, haze, bloom, shadows, outlines and more, with a flat comparison and a reset. A second pass gave the sea depth colour, foam along the shore, reflections and two layers of moving water.</p>
+      <aside class="takeaway"><h3>Try this in your own project</h3><p>When you can&#39;t say what &quot;better&quot; looks like yet, ask for sliders and switches so you can compare options yourself. Asking for ways to improve something often gives you a menu of ideas to pick from.</p></aside>
+
+    </div><div class="evidence paired"><figure><a href="media/20261020-104258-town-tech-art/flat-vs-depth-harbor.webp" class="zoom" aria-label="Enlarge: The harbour shown flat and with the depth effects on"><img src="media/20261020-104258-town-tech-art/flat-vs-depth-harbor.webp" alt="The harbour shown flat and with the depth effects on" loading="lazy" decoding="async"></a><figcaption>The same harbour: flat, then with lighting and depth effects.</figcaption></figure><figure><video controls muted playsinline preload="none" poster="media/20261020-110416-town-sea/sea-harbor-poster.webp" aria-label="Harbour water moving with foam along the shore"><source src="media/20261020-110416-town-sea/sea-harbor.mp4" type="video/mp4">Your browser cannot play this video. <a href="media/20261020-110416-town-sea/sea-harbor.mp4">Open the clip</a>.</video><figcaption>The reworked water in motion.</figcaption></figure></div></div>
+  </section>
+<section class="chapter" id="world" aria-labelledby="title-world">
+    <header class="chapter-head"><span class="number">10</span><div><h2 id="title-world">Give the journey somewhere to go</h2><p class="context">A bigger world needed more than repeating buildings. The player had to be able to travel through it.</p></div></header>
+    <div class="chapter-grid"><div class="words">
+      <div class="quote"><div class="quote-head"><span>The prompt</span><button class="copy" type="button" data-copy="quote-world" hidden aria-label="Copy prompt excerpt">Copy excerpt</button></div><blockquote id="quote-world">if we want to have a large world that multiple people can walk around and drive around,  but obviously there&#39;s a rendering limit, what should we do?</blockquote></div>
+    <details class="source"><summary>Read the full prompt</summary><div class="source-body"><p class="source-note">Original message to the coding agent. Spelling and wording preserved.</p><pre>if we want to have a large world that multiple people can walk around and drive around,  but obviously there&#39;s a rendering limit, what should we do?
+i assume we do some form of &#39;level streaming&#39;, such that only parts within the fov are in?</pre></div></details>
+
+      <p class="result">A world test explored loading the area near the player. A later playable version connected sixteen islands with boat journeys. The courier could leave the home pier, cross the water and go ashore on another island.</p>
+      <aside class="takeaway"><h3>Try this in your own project</h3><p>Explain what the extra space is for. Ask to test a real journey through it, including getting there and getting back.</p></aside>
+
+    </div><div class="evidence "><figure><a href="media/2026-10-20-play-archipelago/04-crossing.jpg" class="zoom" aria-label="Enlarge: Courier sailing a boat between islands in the playable world"><img src="media/2026-10-20-play-archipelago/04-crossing.jpg" alt="Courier sailing a boat between islands in the playable world" loading="lazy" decoding="async"></a><figcaption>Later game capture: sailing between islands. Development controls are visible.</figcaption></figure></div></div>
+  </section>
+<section class="chapter" id="wayoff" aria-labelledby="title-wayoff">
+    <header class="chapter-head"><span class="number">11</span><div><h2 id="title-wayoff">Say what you couldn&#39;t do</h2><p class="context">The islands were connected by boat, but while playing, the way off an island wasn&#39;t there or wasn&#39;t visible.</p></div></header>
+    <div class="chapter-grid"><div class="words">
+      <div class="quote"><div class="quote-head"><span>The prompt</span><button class="copy" type="button" data-copy="quote-wayoff" hidden aria-label="Copy prompt excerpt">Copy excerpt</button></div><blockquote id="quote-wayoff">i can&#39;t seem to find a path from the my island to the next.</blockquote></div>
+    <details class="source"><summary>Read the full prompt</summary><div class="source-body"><p class="source-note">Original message to the coding agent. Spelling and wording preserved.</p><pre>ok you would have made the massive world that is connected? i can&#39;t seem to find a path from the my island to the next.</pre></div></details>
+      <div class="quote followup"><div class="quote-head"><span>A later correction</span><button class="copy" type="button" data-copy="followup-wayoff" hidden aria-label="Copy follow-up excerpt">Copy excerpt</button></div><blockquote id="followup-wayoff">right now it&#39;s hard to locate or see the docks because they are a level below, someone might think there is no way off the island</blockquote></div>
+    <details class="source"><summary>Read the full follow-up</summary><div class="source-body"><p class="source-note">Original message to the coding agent. Spelling and wording preserved.</p><pre>right now it&#39;s hard to locate or see the docks because they are a level below, someone might think there is no way off the island, how can we provide a good on screen indicator or something as they get within line of site at a good distsance.</pre></div></details>
+      <p class="result">The first report uncovered a real gap: four islands had no boat at all. Every pier now has one. The second report led to signs above the piers showing how many boats are free and how far away, plus a pointer at the edge of the screen when no pier is in view.</p>
+      <aside class="takeaway"><h3>Try this in your own project</h3><p>Describe what you tried and couldn&#39;t do, in plain words. A report like &quot;I can&#39;t find a way off this island&quot; lets the agent look for the cause, which may be different from what you&#39;d guess.</p></aside>
+
+    </div><div class="evidence "><figure><a href="media/20261021-prompts-more/boat-here-sign.webp" class="zoom" aria-label="Enlarge: A Boat here sign floating over a pier beyond the street, with the minimap at the bottom left"><img src="media/20261021-prompts-more/boat-here-sign.webp" alt="A Boat here sign floating over a pier beyond the street, with the minimap at the bottom left" loading="lazy" decoding="async"></a><figcaption>A sign over the pier shows a free boat 35 m away; the minimap names the island.</figcaption></figure></div></div>
+  </section>
+<section class="chapter" id="shared" aria-labelledby="title-shared">
+    <header class="chapter-head"><span class="number">12</span><div><h2 id="title-shared">Decide what players share</h2><p class="context">The next step brought other players into the world. A second prompt corrected an assumption about who owned the vehicles.</p></div></header>
+    <div class="chapter-grid"><div class="words">
+      <div class="quote"><div class="quote-head"><span>The prompt</span><button class="copy" type="button" data-copy="quote-shared" hidden aria-label="Copy prompt excerpt">Copy excerpt</button></div><blockquote id="quote-shared">ok now let&#39;s make this multplayer, we should have a few spawn points around the world
+it is a single persistent world</blockquote></div>
+    <details class="source"><summary>Read the full prompt</summary><div class="source-body"><p class="source-note">Original message to the coding agent. Spelling and wording preserved.</p><pre>ok now let&#39;s make this multplayer, we should have a few spawn points around the world
+it is a single persistent world
+we will use colyseus for this
+we want to make sure it&#39;s optimised and smooth, so client side prediction, quantised position updates, offload animation to client side and just sync changes in state, etc.
+integrate with wavedash lobbies</pre></div></details>
+      <div class="quote followup"><div class="quote-head"><span>A later correction</span><button class="copy" type="button" data-copy="followup-shared" hidden aria-label="Copy follow-up excerpt">Copy excerpt</button></div><blockquote id="followup-shared">wdym by each player has their own trike and boat, we should not have that, it should be a fixed amount.</blockquote></div>
+    <details class="source"><summary>Read the full follow-up</summary><div class="source-body"><p class="source-note">Original message to the coding agent. Spelling and wording preserved.</p><pre>sub-agent to make some b-roll footage of the multiplayer working
+in the meantime in this main chat
+wdym by each player has their own trike and boat, we should not have that, it should be a fixed amount.</pre></div></details>
+      <p class="result">The first version created vehicles for each person. The correction made them a shared fleet: get off a trike and it stays parked for someone else to use.</p>
+      <aside class="takeaway"><h3>Try this in your own project</h3><p>Spell out which things belong to a player and which belong to the world. Check what happens when two people want the same thing.</p></aside>
+
+    </div><div class="evidence "><figure><video controls muted playsinline preload="none" poster="media/2026-10-20-multiplayer-broll/06-one-shared-trike-poster.jpg" aria-label="Two players interacting with one shared postal trike"><source src="media/2026-10-20-multiplayer-broll/06-one-shared-trike.mp4" type="video/mp4">Your browser cannot play this video. <a href="media/2026-10-20-multiplayer-broll/06-one-shared-trike.mp4">Open the clip</a>.</video><figcaption>Recorded multiplayer play: one trike shared between players.</figcaption></figure></div></div>
+  </section>
+<section class="chapter" id="deliveries" aria-labelledby="title-deliveries">
+    <header class="chapter-head"><span class="number">13</span><div><h2 id="title-deliveries">Help the player see what to do</h2><p class="context">Deliveries worked, but too much attention went to buttons and status text. The request brought directions into the world itself.</p></div></header>
+    <div class="chapter-grid"><div class="words">
+      <div class="quote"><div class="quote-head"><span>The prompt</span><button class="copy" type="button" data-copy="quote-deliveries" hidden aria-label="Copy prompt excerpt">Copy excerpt</button></div><blockquote id="quote-deliveries">There should be a in-game visual guide trail that guides a path toward the location. The player hence can easily know where to go. This is unobtrusive.</blockquote></div>
+    <details class="source"><summary>Read the full prompt</summary><div class="source-body"><p class="source-note">Original message to the coding agent. Spelling and wording preserved.</p><pre>we now should focus on fixing the entire parcel delivery feature first of all, the core mechanic of picking parcels and delivering them is not great - because it involves looking in the top left to see statuses, requires clicking buttons, and has no real visual gameplay feedback. 1. A user reaching a parcel pick up hotspot should have its details appear in the middle over the parcel with just enough info. Start location, End location, Payment, Timing. The modal also says press &lt;action button&gt; to start. 2. Once that happens, the parcel hotspot and the parcel is removed and the target is spawned. Status should appear in the center top of screen like the timer and location it needs to be delivered to. 3. There should be a in-game visual guide trail that guides a path toward the location. The player hence can easily know where to go. This is unobtrusive. 4. When they reach the spot, they need to be on foot in order to deliver the parcel. They get paid with a receipt (any fast bonuses, etc.) generated on screen to give a nice tacticle feedback folowed by a chop. Do you get it now? Further more, if the parcel needs to be delivered to another island - the guide should lead them to the nearest boat. Then on boat, the guide should lead them to the target pier. Then from the pier, they get guided to the target.</pre></div></details>
+      <div class="quote followup"><div class="quote-head"><span>A later correction</span><button class="copy" type="button" data-copy="followup-deliveries" hidden aria-label="Copy follow-up excerpt">Copy excerpt</button></div><blockquote id="followup-deliveries">thanks the receipt ends up blocking the view so show it on the side</blockquote></div>
+    <details class="source"><summary>Read the full follow-up</summary><div class="source-body"><p class="source-note">Original message to the coding agent. Spelling and wording preserved.</p><pre>thanks the receipt ends up blocking the view so show it on the side
+[Image #1] it is not obvious to dock, becauase a &#39;faux&#39; ship is there. We should allow docking on either side, and show very clearly where the docking area is with like a &#39;ghosting&#39;</pre></div></details>
+      <p class="result">A trail guides the courier to the destination, via a boat and pier when needed. A receipt confirms the handover. Playing again revealed that the receipt covered too much of the scene, so it moved to the side.</p>
+      <aside class="takeaway"><h3>Try this in your own project</h3><p>Describe the information a player needs at the moment they need it. Then play again and check whether the new feedback gets in the way.</p></aside>
+
+    </div><div class="evidence "><figure><a href="media/20261021-012627-delivery-redesign/boat-sailing-trail.webp" class="zoom" aria-label="Enlarge: A delivery route trail leads the boat toward the destination island"><img src="media/20261021-012627-delivery-redesign/boat-sailing-trail.webp" alt="A delivery route trail leads the boat toward the destination island" loading="lazy" decoding="async"></a><figcaption>Actual game capture: the delivery trail continues across the water.</figcaption></figure></div></div>
+  </section>
+<section class="chapter" id="customise" aria-labelledby="title-customise">
+    <header class="chapter-head"><span class="number">14</span><div><h2 id="title-customise">Let players put themselves in</h2><p class="context">Everyone started as the same courier. Players needed a simple way to make the character theirs before playing.</p></div></header>
+    <div class="chapter-grid"><div class="words">
+      <div class="quote"><div class="quote-head"><span>The prompt</span><button class="copy" type="button" data-copy="quote-customise" hidden aria-label="Copy prompt excerpt">Copy excerpt</button></div><blockquote id="quote-customise">now we want to be able to have a bit of customisation for users before they enter the game, so their character will be on screen and then they can click customise before going in. simple set of options, with a random button.</blockquote></div>
+    <details class="source"><summary>Read the full prompt</summary><div class="source-body"><p class="source-note">Original message to the coding agent. Spelling and wording preserved.</p><pre>now we want to be able to have a bit of customisation for users before they enter the game, so their character will be on screen and then they can click customise before going in. simple set of options, with a random button.</pre></div></details>
+      <div class="quote followup"><div class="quote-head"><span>A later correction</span><button class="copy" type="button" data-copy="followup-customise" hidden aria-label="Copy follow-up excerpt">Copy excerpt</button></div><blockquote id="followup-customise">we should have the characer on the right already with the customise under him
+player name under, with the squiggly lines underneath to ineidcate it can be changed.</blockquote></div>
+    <details class="source"><summary>Read the full follow-up</summary><div class="source-body"><p class="source-note">Original message to the coding agent. Spelling and wording preserved.</p><pre>we should have the characer on the right already with the customise under him
+player name under, with the squiggly lines underneath to ineidcate it can be changed.</pre></div></details>
+      <p class="result">The menu now shows your courier, with Customise and your name underneath. Customise opens one row of colours per part, plus Random and Original. Other players see your colours too.</p>
+      <aside class="takeaway"><h3>Try this in your own project</h3><p>Describe what the player sees and the few choices they get. A Random button helps people who don&#39;t want to decide, and saying where things sit on screen saves a round of changes.</p></aside>
+
+    </div><div class="evidence paired"><figure><a href="media/20261021-customise/menu.webp" class="zoom" aria-label="Enlarge: Menu with the courier on the right, a Customise button and the name below"><img src="media/20261021-customise/menu.webp" alt="Menu with the courier on the right, a Customise button and the name below" loading="lazy" decoding="async"></a><figcaption>The menu: your courier, Customise, and your name.</figcaption></figure><figure><a href="media/20261021-customise/customise.webp" class="zoom" aria-label="Enlarge: Customise panel with colour rows for each part of the courier"><img src="media/20261021-customise/customise.webp" alt="Customise panel with colour rows for each part of the courier" loading="lazy" decoding="async"></a><figcaption>Customise: a row of colours for each part, plus Random.</figcaption></figure></div></div>
+  </section>
+<section class="chapter" id="boost" aria-labelledby="title-boost">
+    <header class="chapter-head"><span class="number">15</span><div><h2 id="title-boost">Give a key a new job, with a limit</h2><p class="context">In the trike and the boat, Shift only slowed you down. Travel between islands could feel slow.</p></div></header>
+    <div class="chapter-grid"><div class="words">
+      <div class="quote"><div class="quote-head"><span>The prompt</span><button class="copy" type="button" data-copy="quote-boost" hidden aria-label="Copy prompt excerpt">Copy excerpt</button></div><blockquote id="quote-boost">shift when in car should be an boost accelerator but has a cooldown / shift when in boat same thing</blockquote></div>
+    <details class="source"><summary>Read the full prompt</summary><div class="source-body"><p class="source-note">Original message to the coding agent. Spelling and wording preserved.</p><pre>shift when in car should be an boost accelerator but has a cooldown / shift when in boat same thing</pre><p class="source-note">Other messages from the same exchange are left out here.</p></div></details>
+
+      <p class="result">Pressing Shift while riding forward now gives a short burst of speed, then a few seconds to recharge. A small meter shows when it is ready, and on phones the Run button becomes Boost.</p>
+      <aside class="takeaway"><h3>Try this in your own project</h3><p>Say the new rule and its limit in the same breath, like &quot;a boost, but with a cooldown&quot;. The limit is what keeps a fun idea from taking over the game.</p></aside>
+
+    </div><div class="evidence "><figure><a href="media/20261021-prompts-more/boost-meter.webp" class="zoom" aria-label="Enlarge: Boat at sea with a Boost meter on screen and the minimap showing At Sea"><img src="media/20261021-prompts-more/boost-meter.webp" alt="Boat at sea with a Boost meter on screen and the minimap showing At Sea" loading="lazy" decoding="async"></a><figcaption>Boosting the boat: the meter drains, then recharges.</figcaption></figure></div></div>
+  </section>
+<section class="practice" id="try-it" aria-labelledby="try-title"><div><p class="eyebrow">Your next prompt</p><h2 id="try-title">Give it something you can try.</h2><p>Start with the experience you want. Once you have a version to play, describe a specific moment that needs work and ask to see the change.</p><p class="source-note">This is a new fill-in template inspired by the examples above, not an original project prompt.</p></div><div class="quote"><div class="quote-head"><span>A template to adapt</span><button class="copy" data-copy="template" type="button" hidden>Copy template</button></div><blockquote id="template">I want the player to feel [feeling] while they [main action].
+First, show me [a small scene or example] so I can decide on the direction.
+
+When I tried it, I noticed [specific problem].
+It should [describe the action or response you want].
+Show me the revised version so I can try it again.</blockquote></div></section>
+<nav class="closing" aria-label="Continue"><a class="button primary" href="https://github.com/chongdashu/retro-del-sol-resources/blob/main/LESSONS.md">Read the lessons</a><a class="button" href="https://github.com/chongdashu/retro-del-sol-resources/blob/main/models/README.md">See the models</a><a class="button" href="https://retrodelsol.com/">Play Retro del Sol</a></nav>
+</main>
+<footer>Retro del Sol · Recorded project work, 20 and 21 October 2026. Images marked “mockup” show the intended direction; game captures show the work at that stage. The full build, with its source, records and journey, is shared with <a href="https://www.vibegamedev.com/">VibeGameDev</a> members.</footer>
+<p class="copy-status" role="status" aria-live="polite"></p>
+<script>
+(() => {
+  let clearStatus;
+  const status = document.querySelector('.copy-status');
+  document.querySelectorAll('[data-copy]').forEach(button => {
+    button.hidden = false;
+    button.addEventListener('click', async () => {
+      const prompt = document.getElementById(button.dataset.copy);
+      clearTimeout(clearStatus);
+      try {
+        await navigator.clipboard.writeText(prompt.textContent);
+        status.textContent = 'Copied. Adapt it to your own project.';
+      } catch {
+        const range = document.createRange();
+        range.selectNodeContents(prompt);
+        const selection = getSelection();
+        selection.removeAllRanges(); selection.addRange(range);
+        status.textContent = 'Text selected. Use your browser’s Copy command.';
+      }
+      clearStatus = setTimeout(() => { status.textContent = ''; }, 6000);
+    });
+  });
+  addEventListener('keydown', e => {
+  });
+})();
+</script>
+</body>
+</html>

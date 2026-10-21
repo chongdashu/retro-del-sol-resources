@@ -1,0 +1,31 @@
+Retro del Sol Public Licence
+============================
+
+Copyright (c) 2026 Chong-U Lim / VibeGameDev.com. All rights reserved, except as
+granted below.
+
+1. Lessons, page and media
+--------------------------
+You may read, link to and share LESSONS.md, prompts.html, the README files and the
+files in media/, and quote from them, with credit to "Retro del Sol by chongdashu"
+and a link to this repository. You may not republish them, in whole or in large
+part, as your own course, book or product.
+
+2. Models
+---------
+You may use, modify and include the models in models/ in your own games,
+prototypes and other projects, including commercial ones, with no royalty owed.
+Credit is welcome but not required. You may not sell, re-upload or redistribute
+the models on their own or as an asset pack, in original or modified form.
+
+3. No AI training
+-----------------
+You may not use any part of this repository, including the models, images and
+videos, to train, fine-tune, distill or evaluate an AI or machine-learning model,
+or include it in a dataset for that purpose. The models are outputs of Retro
+Diffusion, whose terms of service forbid this use.
+
+4. No warranty
+--------------
+Everything here is provided "as is", without warranty of any kind. The author is
+not liable for any claim or damage arising from its use.
